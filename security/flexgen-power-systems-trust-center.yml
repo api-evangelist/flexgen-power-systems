@@ -1,0 +1,48 @@
+generated: '2026-08-16'
+method: probed
+source: https://trust.flexgen.com/
+trust_center:
+  url: https://trust.flexgen.com/
+  http_status: 200
+  title: FlexGen Trust Center
+  platform: Vanta
+  platform_evidence: >-
+    DNS CNAME trust.flexgen.com -> 667f1281bb4f7b57d3bcc51a.cname.vantatrust.com; page assets served
+    from assets.vanta.com; document carries a Vanta trust-report slug (data-slugid).
+  canonical: https://trust.flexgen.com
+  description_meta: >-
+    FlexGen designs and integrates battery energy storage solutions and the software platform that is
+    enabling today's energy transition.
+certifications:
+- name: ISO 9001:2015
+  scope: >-
+    Design, development, deployment, and remote software support of the HybridOS energy management
+    system software platform.
+  announced: '2026-07-29'
+  evidence: https://www.flexgen.com/resources/blog/flexgens-hybridos-energy-management-system-receives-iso-90012015-certification
+  method: searched
+certifications_unread:
+  reason: js-rendered
+  detail: >-
+    The Vanta trust center renders its control/certification list client-side from an authenticated
+    Vanta API. Anonymous GETs of https://trust.flexgen.com/ and every candidate data path return the
+    same 4,367-byte HTML shell; the Vanta GraphQL endpoint rejects unsigned requests
+    ("Missing `signature` or `signedAt`") and api.vanta.com/v1 returns 401 Unauthorized. Whatever
+    certifications FlexGen lists inside the trust center could NOT be read without credentials and are
+    therefore NOT recorded here. Absence from this file is not evidence of absence at FlexGen.
+  probes:
+  - url: https://trust.flexgen.com/
+    status: 200
+    content_type: text/html
+  - url: https://app.vanta.com/graphql
+    status: 400
+    note: 'Missing `signature` or `signedAt`'
+  - url: https://api.vanta.com/v1/trust-centers/t4rbw0ujly5ov275f0e77
+    status: 401
+security_contact: null
+vulnerability_disclosure: null
+note: >-
+  FlexGen serves a real, company-branded trust center on its own domain. It publishes no security.txt,
+  no bug-bounty program, and no vulnerability-disclosure policy that could be reached anonymously —
+  see security/flexgen-power-systems-domain-security.yml and well-known/flexgen-power-systems-well-known.yml.
+  No `Security` pointer is emitted, because no disclosure surface was found.

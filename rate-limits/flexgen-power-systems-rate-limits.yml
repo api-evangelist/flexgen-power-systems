@@ -1,0 +1,24 @@
+generated: '2026-08-16'
+method: searched
+source: https://www.flexgen.com/software/hybridos-energy-management-system, https://www.flexgen.com/ sitemap
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  FlexGen documents no rate limits. FlexGen's own product pages state that HybridOS provides
+  "automated APIs" and, as of the 2026 HybridOS release, "historian data API access" — so an API
+  demonstrably exists — but there is no public developer portal, API reference, or quota/throttling
+  documentation anywhere on flexgen.com, and no api./docs./developer. host resolves in DNS. Any
+  published limits would live inside customer documentation reached through the login-gated portal
+  at portal.flexgen.com. An honest zero: checked, nothing published.
+api_exists_but_undocumented: true
+evidence:
+- url: https://www.flexgen.com/software/hybridos-energy-management-system
+  status: 200
+  quote: >-
+    HybridOS is a hardware-agnostic EMS platform that enables multi-source and multi-site energy
+    management for peak BESS performance with instantaneous monitoring, web-based controls, and
+    automated APIs.
+- url: https://portal.flexgen.com/
+  status: 200
+  note: Noloco-hosted customer portal; login required, no anonymous documentation.

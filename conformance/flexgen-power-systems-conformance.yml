@@ -1,0 +1,74 @@
+generated: '2026-08-16'
+method: searched
+source: >-
+  https://www.flexgen.com/software/hybridos-energy-management-system,
+  https://www.flexgen.com/solar-power-plant-controller-ppc,
+  https://www.flexgen.com/resources/blog/flexgens-hybridos-energy-management-system-receives-iso-90012015-certification,
+  https://trust.flexgen.com/
+scope: >-
+  FlexGen publishes no machine-readable API contract, so nothing here is derived from an OpenAPI
+  document. Every entry below is a claim FlexGen makes on its own public pages, or a verified absence.
+  The protocol entries describe the INDUSTRIAL protocol surface of the HybridOS EMS / power plant
+  controller, not a web-API surface.
+conformance:
+- id: iso-9001-2015
+  name: ISO 9001:2015 Quality Management Systems
+  conforms: true
+  evidence: >-
+    FlexGen announced on 2026-07-29 that HybridOS received ISO 9001:2015 certification covering
+    "the design, development, deployment, and remote software support of the HybridOS energy
+    management system software platform."
+  source: https://www.flexgen.com/resources/blog/flexgens-hybridos-energy-management-system-receives-iso-90012015-certification
+- id: modbus
+  name: Modbus
+  conforms: true
+  evidence: 'FlexGen PPC page: "Support protocols including modbus, DNP3, CAN, synchrophasor and more."'
+  source: https://www.flexgen.com/solar-power-plant-controller-ppc
+- id: dnp3
+  name: DNP3 (IEEE 1815)
+  conforms: true
+  evidence: 'FlexGen PPC page: "Support protocols including modbus, DNP3, CAN, synchrophasor and more."'
+  source: https://www.flexgen.com/solar-power-plant-controller-ppc
+- id: can
+  name: CAN bus
+  conforms: true
+  evidence: 'FlexGen PPC page: "Support protocols including modbus, DNP3, CAN, synchrophasor and more."'
+  source: https://www.flexgen.com/solar-power-plant-controller-ppc
+- id: synchrophasor
+  name: Synchrophasor (IEEE C37.118)
+  conforms: true
+  evidence: >-
+    FlexGen PPC page names "synchrophasor" among supported protocols. The specific IEEE C37.118
+    profile is NOT stated by FlexGen; the standard name is inferred and flagged here rather than
+    asserted.
+  confidence: low
+  source: https://www.flexgen.com/solar-power-plant-controller-ppc
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: >-
+    No OpenAPI/Swagger document found. /openapi.json, /openapi.yaml, /swagger.json and /api-docs were
+    probed on www.flexgen.com (404 on all), portal.flexgen.com and trust.flexgen.com (SPA catch-all
+    200s returning HTML shells). api.flexgen.com, docs.flexgen.com, developer.flexgen.com and
+    developers.flexgen.com do not resolve in DNS.
+- id: asyncapi
+  name: AsyncAPI
+  conforms: false
+  evidence: No AsyncAPI document, event catalog, or webhook reference published.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: >-
+    No /.well-known/oauth-authorization-server or /.well-known/openid-configuration served. The
+    customer portal (portal.flexgen.com, Noloco) is login-gated and publishes no anonymous
+    authorization-server metadata.
+- id: rfc9457
+  name: RFC 9457 Problem Details for HTTP APIs
+  conforms: false
+  evidence: No public error reference or contract to evaluate.
+- id: rfc9116
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence: >-
+    /.well-known/security.txt returns 404 on www.flexgen.com; the 200 on trust.flexgen.com is the
+    Vanta SPA shell, not a security.txt document.

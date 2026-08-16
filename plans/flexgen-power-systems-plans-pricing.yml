@@ -1,0 +1,14 @@
+generated: '2026-08-16'
+method: searched
+source: https://www.flexgen.com/ (full sitemap of 100+ URLs reviewed), https://www.flexgen.com/contact-us
+plan_count: 0
+plans: []
+note: >-
+  FlexGen publishes no pricing, plans, tiers, or quotas of any kind. Its sitemap contains no /pricing
+  page and no equivalent; HybridOS, HybridOS Control BMS, the power plant controller, and the
+  activation/lifecycle service lines are all sold through a "Contact Us" enterprise motion for
+  grid-scale battery storage projects. This is a verified absence, not an unchecked field: the site
+  sitemap.xml was enumerated and every product and solutions page was reviewed. There is no
+  self-serve sign-up, no published rate card, and no machine-readable catalog endpoint.
+sales_motion: enterprise-contact-sales
+contact: https://www.flexgen.com/contact-us

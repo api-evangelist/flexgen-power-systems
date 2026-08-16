@@ -1,17 +1,33 @@
 aid: flexgen-power-systems
 name: FlexGen Power Systems
-description: 'FlexGen Power Systems is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'FlexGen Power Systems is a Durham, North Carolina energy storage technology company founded
+  in 2009 that designs, integrates and operates grid-scale battery energy storage systems (BESS) and the
+  software that runs them. Its flagship product is HybridOS, a hardware-agnostic energy management system
+  (EMS) for multi-source, multi-site battery and solar portfolios, alongside HybridOS Control BMS (a
+  US-built battery management system), a solar power plant controller (PPC), EMS retrofit, activation and
+  lifecycle services, and data-center power solutions. FlexGen has been named a BloombergNEF Tier 1 energy
+  storage company, acquired Clean Energy Services (CES) and the assets of Powin, and states that HybridOS
+  exposes automated APIs and historian data API access to customers. No public developer portal, API
+  reference or machine-readable specification is published; the HybridOS API surface is reached only
+  through customer deployments and the login-gated FlexGen customer portal.'
 url: https://raw.githubusercontent.com/api-evangelist/flexgen-power-systems/refs/heads/main/apis.yml
+image: https://www.flexgen.com/themes/custom/flexgen/logo.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-16'
 modified: '2026-08-16'
 tags:
 - Company
+- Energy
+- Energy Storage
+- Battery Energy Storage
+- Energy Management
+- Grid
+- Utilities
+- Renewable Energy
+- Industrial IoT
+- SCADA
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +36,55 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.flexgen.com/
+- type: Blog
+  url: https://www.flexgen.com/resources/blog
+- type: Support
+  url: https://www.flexgen.com/contact-us
+- type: GitHubOrganization
+  url: https://github.com/flexgen-power
+- type: PrivacyPolicy
+  url: https://www.flexgen.com/privacy
+- type: TrustCenter
+  url: security/flexgen-power-systems-trust-center.yml
+- type: Compliance
+  url: conformance/flexgen-power-systems-conformance.yml
+- type: Conformance
+  url: conformance/flexgen-power-systems-conformance.yml
+- type: DomainSecurity
+  url: security/flexgen-power-systems-domain-security.yml
+- type: Packages
+  url: packages/flexgen-power-systems-packages.yml
+- type: Plans
+  url: plans/flexgen-power-systems-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/flexgen-power-systems-rate-limits.yml
+- type: LLMsTxt
+  url: llms/flexgen-power-systems-llms.txt
+- type: SecondaryMarketListing
   url: https://forgeglobal.com/flexgen-power-systems_stock/
+x-enrichment:
+  date: '2026-08-16'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    FlexGen markets "automated APIs" and "historian data API access" as HybridOS features but
+    publishes no developer portal or reference anywhere on flexgen.com — api./docs./developer.
+    subdomains do not resolve in DNS, and the only route to HybridOS documentation is the
+    login-gated Noloco customer portal at portal.flexgen.com, which requires an active tenant.
+  evidence:
+  - url: https://www.flexgen.com/software/hybridos-energy-management-system
+    status: 200
+  - url: https://portal.flexgen.com/
+    status: 200
+  - url: https://www.flexgen.com/openapi.json
+    status: 404
+  - url: https://www.flexgen.com/llms.txt
+    status: 404
+  - url: https://www.flexgen.com/.well-known/api-catalog
+    status: 404
+  checked: '2026-08-16'

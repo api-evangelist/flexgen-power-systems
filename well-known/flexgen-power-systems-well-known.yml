@@ -1,0 +1,115 @@
+generated: '2026-08-16'
+method: probed
+source: live HTTP probes of every FlexGen host resolved from DNS on 2026-08-16
+note: >-
+  Every /.well-known/ path was probed on all three live FlexGen hosts. NOTHING was found.
+  www.flexgen.com (Drupal) returns a real 404 for every path. portal.flexgen.com (a Noloco-hosted,
+  login-gated customer portal) and trust.flexgen.com (a Vanta-hosted trust center) are single-page
+  apps whose catch-all route answers HTTP 200 with the same ~4KB/~414KB HTML shell for EVERY path,
+  including paths that cannot exist. Those 200s are NOT documents and are recorded as misses.
+  No WellKnown or SecurityTxt pointer is emitted in apis.yml, because FlexGen serves no well-known
+  document. This file records a verified ABSENCE.
+hosts:
+- host: www.flexgen.com
+  server: Drupal
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: portal.flexgen.com
+  server: Noloco (login-gated customer portal)
+  spa_catch_all: true
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/agent-card.json
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/agent.json
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+- host: trust.flexgen.com
+  server: Vanta Trust Center
+  spa_catch_all: true
+  paths:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    file: null
+    note: >-
+      Vanta SPA shell (identical 4,367-byte body returned for every path, including /openapi.json
+      and /llms.txt) — NOT a security.txt. Treated as a miss; no SecurityTxt pointer emitted.
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/agent-card.json
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/agent.json
+    status: 200
+    content_type: text/html
+    file: null
+    note: SPA shell, not a document — treated as a miss
+hits: 0

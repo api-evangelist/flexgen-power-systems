@@ -1,0 +1,60 @@
+generated: '2026-08-16'
+method: searched
+source: >-
+  npm registry search, PyPI, crates.io, RubyGems, NuGet, Maven Central, proxy.golang.org,
+  https://api.github.com/orgs/flexgen-power/repos, https://www.flexgen.com/
+summary: >-
+  FlexGen publishes NO first-party client SDK for any API. Its verified GitHub organization
+  (github.com/flexgen-power — name "FlexGen Power Systems", blog www.flexgen.com, email
+  info@flexgen.com) holds exactly two public repositories and BOTH are forks of upstream Go
+  libraries, not FlexGen client libraries. Registry name collisions were checked and rejected: the
+  PyPI package `flexgen` is the FMInference LLM offloading engine, and the crates.io crate `flexgen`
+  is an unrelated Rust code-generation tool. Neither belongs to FlexGen Power Systems.
+  No `SDKs` pointer is emitted in apis.yml, because FlexGen ships no SDK.
+official_sdk_count: 0
+packages:
+- name: github.com/flexgen-power/opcua
+  language: go
+  registry: go
+  registry_url: https://pkg.go.dev/github.com/flexgen-power/opcua
+  repository: https://github.com/flexgen-power/opcua
+  official: false
+  first_party: false
+  kind: fork
+  description: >-
+    FlexGen's fork of gopcua/opcua, the native Go OPC UA library. OPC UA is the industrial
+    interoperability protocol FlexGen's EMS/controller stack speaks to plant equipment; this is
+    infrastructure FlexGen consumes, not a client library for a FlexGen API.
+  version: v0.0.0-20260804120158-5e0f02670476
+  published: '2026-08-04'
+  version_source: https://proxy.golang.org/github.com/flexgen-power/opcua/@latest
+- name: github.com/flexgen-power/glog
+  language: go
+  registry: go
+  registry_url: https://pkg.go.dev/github.com/flexgen-power/glog
+  repository: https://github.com/flexgen-power/glog
+  official: false
+  first_party: false
+  kind: fork
+  description: FlexGen's fork of golang/glog (leveled execution logs for Go). Internal tooling, not an SDK.
+  version: v1.0.0
+  published: '2021-05-19'
+  version_source: https://proxy.golang.org/github.com/flexgen-power/glog/@latest
+rejected_name_collisions:
+- name: flexgen
+  registry: pypi
+  url: https://pypi.org/pypi/flexgen/json
+  status: 200
+  reason: >-
+    FMInference/FlexGen — a high-throughput LLM inference/offloading engine. Unrelated to FlexGen
+    Power Systems. NOT recorded as a FlexGen package.
+- name: flexgen
+  registry: crates.io
+  url: https://crates.io/api/v1/crates/flexgen
+  status: 200
+  reason: Rust code-generation crate. Unrelated to FlexGen Power Systems.
+registries_with_no_match:
+- npm
+- rubygems
+- nuget
+- maven-central
