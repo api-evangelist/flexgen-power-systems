@@ -11,6 +11,17 @@ description: 'FlexGen Power Systems is a Durham, North Carolina energy storage t
   reference or machine-readable specification is published; the HybridOS API surface is reached only
   through customer deployments and the login-gated FlexGen customer portal.'
 url: https://raw.githubusercontent.com/api-evangelist/flexgen-power-systems/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.flexgen.com/themes/custom/flexgen/logo.svg
 x-type: company
 x-source: harvest:secondary-market
