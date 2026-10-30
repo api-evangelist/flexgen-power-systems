@@ -64,5 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-FlexGen Power Systems is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/flexgen-power-systems_stock/
+FlexGen Power Systems is a Durham, North Carolina energy storage technology company founded in 2009 that designs, integrates and operates grid-scale battery energy storage systems (BESS) and the software that runs them. Its flagship product is HybridOS, a hardware-agnostic energy management system (EMS) for multi-source, multi-site battery and solar portfolios, alongside HybridOS Control BMS (a US-built battery management system), a solar power plant controller (PPC), EMS retrofit, activation and lifecycle services, and data-center power solutions. FlexGen has been named a BloombergNEF Tier 1 energy storage company, acquired Clean Energy Services (CES) and the assets of Powin, and states that HybridOS exposes automated APIs and historian data API access to customers. No public developer portal, API reference or machine-readable specification is published; the HybridOS API surface is reached only through customer deployments and the login-gated FlexGen customer portal.
+
+**Areas:** Company · Energy · Energy Storage · Battery Energy Storage · Energy Management · Grid · Utilities · Renewable Energy · Industrial IoT · SCADA
+
+## FlexGen Power Systems on APIs.io
+
+Everything profiled for FlexGen Power Systems is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/flexgen-power-systems/](https://apis.io/providers/flexgen-power-systems/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Flexgen Power Systems Domain Security](https://apis.io/security/flexgen-power-systems/flexgen-power-systems-domain-security/)
+- [Flexgen Power Systems Trust Center](https://apis.io/security/flexgen-power-systems/flexgen-power-systems-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Flexgen Power Systems Plans Pricing](https://apis.io/plans/flexgen-power-systems/flexgen-power-systems-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Flexgen Power Systems Rate Limits](https://apis.io/rate-limits/flexgen-power-systems/flexgen-power-systems-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.flexgen.com/)
+- [Support](https://www.flexgen.com/contact-us)
+- [Blog](https://www.flexgen.com/resources/blog)
+- [Privacy policy](https://www.flexgen.com/privacy)
+- [GitHub](https://github.com/flexgen-power)
+
+## API Evangelist rating
+
+**Kin Score 14.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 26.3 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.4** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/flexgen-power-systems/](https://apis.io/providers/flexgen-power-systems/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for FlexGen Power Systems: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/flexgen-power-systems/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
